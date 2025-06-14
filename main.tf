@@ -14,7 +14,7 @@ data "aws_iam_policy_document" "assume_role_ec2" {
 
 # 2. IAM Role
 resource "aws_iam_role" "my_role" {
-  name               = "sri-actions1--custom-managed-role"
+  name               = "sri-actions2--custom-managed-role"
   assume_role_policy = data.aws_iam_policy_document.assume_role_ec2.json
 }
 
@@ -33,7 +33,7 @@ data "aws_iam_policy_document" "custom_logs_policy_doc" {
 
 # 4. Create Custom Managed Policy
 resource "aws_iam_policy" "custom_logs_policy" {
-  name   = "sri-actions1-CustomCloudWatchLogsPolicy"
+  name   = "sri-actions2-CustomCloudWatchLogsPolicy"
   policy = data.aws_iam_policy_document.custom_logs_policy_doc.json
 }
 
