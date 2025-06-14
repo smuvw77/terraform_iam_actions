@@ -10,7 +10,7 @@ data "aws_iam_policy_document" "rds_assume_role" {
 }
 
 resource "aws_iam_role" "rds_monitoring_role" {
-  name               = "rds-monitoring-role"
+  name               = "srini-actions-rds-monitoring-role"
   assume_role_policy = data.aws_iam_policy_document.rds_assume_role.json
 }
 
